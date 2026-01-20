@@ -12,12 +12,20 @@ public class Program {
 
         livro1.codigo = "1598FHK";
         livro1.titulo = "Core Java 2";
-        livro1.autores = "Cay S. Horstmann e Gary Cornel";
         livro1.ISBN = "0130819336";
         livro1.ano = 2005;
 
-        System.out.format("\nLivro 01 \nCódigo: %s \nTitulo: %s \nAutores: %s \nISBN: %s \nAno: %d\n ", livro1.codigo, livro1.titulo,
-        livro1.autores, livro1.ISBN, livro1.ano
+        livro1.autores = new String[2];
+        livro1.autores[0] = "Cay S. Horstmann";
+        livro1.autores[1] = "Gary Cornel";
+
+        System.out.print("\nAutores:\n");
+        for (String autor : livro1.autores) {
+            System.out.format("\n- %s\n", autor);
+        }
+
+        System.out.format("\nLivro 01 \nCódigo: %s \nTitulo: %s \nISBN: %s \nAno: %d\n ", livro1.codigo, livro1.titulo,
+        livro1.ISBN, livro1.ano
         );
 
         // Código: 9865PLO, Título: Java, Como programar, Autores: Harvey Deitel, ISBN: 0130341517, Ano: 2015
@@ -26,14 +34,21 @@ public class Program {
 
         livro2.codigo = "9865PLO";
         livro2.titulo = "Java, Como programar";
-        livro2.autores = "Harvey Deitel";
         livro2.ISBN = "0130341517";
         livro2.ano = 2015;
 
-        System.out.format("\n===================================================================\n");
+        livro2.autores = new String[1];
+        livro2.autores[0] = "Cay S. Horstmann";
 
-        System.out.format("\nLivro 02 \nCódigo: %s \nTitulo: %s \nAutores: %s \nISBN: %s \nAno: %d\n ", livro2.codigo, livro2.titulo,
-        livro2.autores, livro2.ISBN, livro2.ano
+        System.out.format("\n===================================================================\n");
+        
+        System.out.print("\nAutores:\n");
+        for (String autor : livro2.autores) {
+            System.out.format("\n- %s\n", autor);
+        }
+
+        System.out.format("\nLivro 02 \nCódigo: %s \nTitulo: %s \nISBN: %s \nAno: %d\n ", livro2.codigo, livro2.titulo,
+        livro2.ISBN, livro2.ano
         );
 
     }
