@@ -6,8 +6,8 @@ public class Livro {
     
     String codigo;
     String titulo;
-    String autores[];
+    String[] autores;
     String ISBN;
     int ano;
-    
+
 }
